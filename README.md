@@ -7,7 +7,7 @@ Using these scripts you will be able to download the Excel spreadsheet with all 
 
 These scripts will produce a text file per answer that looks more or less like this:
 
-<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/sample.png" alt="Sample output" width="800"/>
+<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/sample.png" alt="Sample output" width="100%"/>
 
 ## Two SQL scripts: one for the students, one for grading
 
