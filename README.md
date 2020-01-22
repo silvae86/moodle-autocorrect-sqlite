@@ -5,7 +5,7 @@ This project is intended to help teachers grade SQL exercises for exams run on M
 
 Using these scripts you will be able to download the Excel spreadsheet with all your students' answers, provide your own suggestions for the correct SQL query for each exercise in separate `.sql` files, and see if the queries written by the students return the same tuples as you expect. 
 
-These scripts will produce a text file like this, useful for assisted evaluation:
+These scripts will produce a text file per answer that looks more or less like this:
 
 <img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/sample.png" alt="Sample output" width="800"/>
 
