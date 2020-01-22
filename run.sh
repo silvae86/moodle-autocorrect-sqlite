@@ -16,6 +16,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 		echo "Running on Linux"
 fi
 
+# (optional) install any requirements of your current app in this venv
+$PIP install -r requirements.txt $FLAGS
+
 if [[ $(ls -1 correction/proposed_answers/ | wc -l | tail -c 2) = '0' ]]; then
 	echo "No answer files detected at $(pwd)/correction/proposed_answers. Exiting."
 else
