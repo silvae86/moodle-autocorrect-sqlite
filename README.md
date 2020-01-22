@@ -1,7 +1,17 @@
 # Moodle SQL Evaluator for SQLite
 
 
-This project is intended to help teachers grade SQL exercises for exams run on Moodle. In the courses that I teach, we evaluate our students using two distinct database scripts. 
+This project is intended to help teachers grade SQL exercises for exams run on Moodle, when a fully automated approach is not the most appropriate and the professors want to grade manually but with some assistance for automatically running the queries written by students. 
+
+Using these scripts you will be able to download the Excel spreadsheet with all your students' answers, provide your own suggestions for the correct SQL query for each exercise in separate `.sql` files, and see if the queries written by the students return the same tuples as you expect. 
+
+These scripts will produce a text file like this, useful for assisted evaluation:
+
+<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/sample.png" alt="Sample output" width="800"/>
+
+## Two SQL scripts: one for the students, one for grading
+
+In the courses that I teach, we evaluate our students using two distinct database scripts. 
 
 While they both share the same database schema, one is provided to the students during the exam and contains fewer records than a second script with additional entries designed to test additional edge cases. We shall call them `script-students.sql` and `script-correction.sql` in this guide.
 
@@ -32,9 +42,15 @@ While they both share the same database schema, one is provided to the students 
 1. Download the answers of your students from moodle
 	1.1. Access the Exam in Moodle
 	1.2. Select the 'Responses' option to access the list of answers given by the students
+	
+	<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/downloading_answers.png" alt="Access all student answers" width="200"/>
+	
 	1.2. Sort the answers by the first name of the students (or any other criteria, as the SQL evaluator will produce a list of answers ordered by that same criteria).
 	1.3. Select Microsoft Excel as the download format for the answers
 	1.4. Click 'Download'. An Excel file will be produced by moodle and start downloading.
+	
+	
+	<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/download_answers.jpg" alt="Ordering and downloading student answers" width="800"/>
 
 2. Change the name of the downloaded file, for example to `student_answers.xlsx` and place it in the `correction` folder.
 
