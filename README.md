@@ -81,6 +81,6 @@ The hard part is done. Let's run the script.
 
 ## Background
 
-I have taught some courses involving databases in SQL (Databases in the Integrated Masters in Informatics Engineering) and Information Systems and Databases (Integrated Masters in Electrical Engineering) and Information Systems Engineering (Integrated Masters in Bioengineering + Masters in Biomedical Engineering). 
+I have taught some courses involving databases and SQL (Databases in the Integrated Masters in Informatics Engineering) and Information Systems and Databases (Integrated Masters in Electrical Engineering) and Information Systems Engineering (Integrated Masters in Bioengineering + Masters in Biomedical Engineering). 
 
 These scripts saved me a ton of copy-paste. Hope they can save some for you too!
