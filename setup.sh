@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+PYTHON=python3.7
+PIP=pip3.7
+FLAGS="--user"
+
 if [ "$(uname)" == "Darwin" ]; then
-    # Do something under Mac OS X platform        
-	PYTHON=python3.7
-	PIP=pip3.7
+    # Do something under Mac OS X platform
 	# #fix any pending issues with homebrew
 	# brew doctor
 
@@ -14,9 +16,7 @@ if [ "$(uname)" == "Darwin" ]; then
 	brew install sashkab/python/python37
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # Do something under GNU/Linux platform
-	PYTHON=python
-	PIP=pip
-	
+
 	# install python
 	sudo apt-get install -y python3.7 python3.7-venv
 fi
@@ -24,15 +24,15 @@ fi
 # install venv
 $PYTHON -m venv env
 
-# activate venv
-source env/bin/activate
-
 # install pip
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-$PYTHON get-pip.py --user
+$PYTHON get-pip.py $FLAGS
 
 # upgrade pip to latest version
-$PIP install --upgrade pip --user
+$PIP install --upgrade pip $FLAGS
+
+#activate venv
+source env/bin/activate
 
 # (optional) install any requirements of your current app in this venv
-$PIP install -r requirements.txt --user
+$PIP install -r requirements.txt $FLAGS

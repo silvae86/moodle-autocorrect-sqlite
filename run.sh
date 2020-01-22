@@ -1,14 +1,19 @@
 #!/usr/bin/env bash
-#activate venv
 
+#activate venv
 source env/bin/activate
 
+PYTHON=python3.7
+PIP=pip3.7
+
+$PYTHON --version
+
 if [ "$(uname)" == "Darwin" ]; then
-    # Do something under Mac OS X platform        
-	PYTHON=python3.7
+    # Do something under Mac OS X platform
+		echo "Running on macOS"
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # Do something under GNU/Linux platform
-	PYTHON=python
+		echo "Running on Linux"
 fi
 
 if [[ $(ls -1 correction/proposed_answers/ | wc -l | tail -c 2) = '0' ]]; then
@@ -17,10 +22,10 @@ else
 	for f in correction/proposed_answers/*; do
 		echo "Answer file detected: $f..."
 		echo "Processing..."
-		
+
 		QUESTION_COLUMN=$(basename "$f" | cut -d. -f1)
 		ANSWER_FILE_NAME_NO_EXTENSION=$(basename "$f" | cut -d. -f1)
-		
+
 		$PYTHON batch_sql_corrector.py \
 			"$(pwd)/correction/script-students.sql" \
 			"$(pwd)/correction/script-correction.sql" \
