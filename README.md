@@ -63,7 +63,7 @@ While they both share the same database schema, one is provided to the students 
 
 	4.1. For every question that you want to automatically correct, place a `.sql` file with the same name as the header of the column in the Excel file downloaded from Moodle. 
 	
-		- For example, if the `Response 15` column in the Excel file contains SQL answers, you need to create a `correction/proposed_answers/Response 15.sql` file with your proposed solution (in SQL) for that question.
+	- For example, if the `Response 15` column in the Excel file contains SQL answers, you need to create a `correction/proposed_answers/Response 15.sql` file with your proposed solution (in SQL) for that question.
 
 	4.2. The script will detect these `.sql` files and try to correct only those answers where there is a proposed answer.
 
