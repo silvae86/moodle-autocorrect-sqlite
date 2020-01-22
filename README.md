@@ -31,24 +31,24 @@ While they both share the same database schema, one is provided to the students 
 3. Go to the directory where the cloned files are
 		`cd moodle-sql-evaluator`
 		
-4. Run the setup in Terminal
-	- On macOS
-		`chmod setup-mac.sh && ./setup-mac.sh`
-	- On Ubuntu Linux
-		`chmod setup-ubuntu.sh && ./setup-ubuntu.sh`
+4. Run the setup in Terminal (should detect your operating system, macOS or Ubuntu, and act appropriately)
+	- `chmod setup.sh && ./setup.sh`
 
 ### Preparation of the environment
 
 1. Download the answers of your students from moodle
+
 	1.1. Access the Exam in Moodle
+	
 	1.2. Select the 'Responses' option to access the list of answers given by the students
 	
 	<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/downloading_answers.png" alt="Access all student answers" width="200"/>
 	
 	1.2. Sort the answers by the first name of the students (or any other criteria, as the SQL evaluator will produce a list of answers ordered by that same criteria).
-	1.3. Select Microsoft Excel as the download format for the answers
-	1.4. Click 'Download'. An Excel file will be produced by moodle and start downloading.
 	
+	1.3. Select Microsoft Excel as the download format for the answers
+	
+	1.4. Click 'Download'. An Excel file will be produced by moodle and start downloading.
 	
 	<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/download_answers.jpg" alt="Ordering and downloading student answers" width="800"/>
 
@@ -68,14 +68,17 @@ While they both share the same database schema, one is provided to the students 
 The hard part is done. Let's run the script.
 
 1. Open Terminal
+
 2. `cd` to the folder where your files are (same as where you initially cloned this too) 
+
 3. Run script
-
 	`./run.sh`
-4. See the results in the `Results/` folder. There should be one .txt file for each of the questions, with this layout:
-
-
+	
+4. See the results in the `Results/` folder. 
+	- There should be one .txt file for each of the questions, with this layout:
 
 ## Background
 
-I have taught some courses involving databases in SQL (Databases in the Integrated Masters in Informatics Engineering) and Information Systems and Databases (Integrated Masters in Electrical Engineering) and Information Systems Engineering (Integrated Masters in Bioengineering + Masters in Biomedical Engineering).
+I have taught some courses involving databases in SQL (Databases in the Integrated Masters in Informatics Engineering) and Information Systems and Databases (Integrated Masters in Electrical Engineering) and Information Systems Engineering (Integrated Masters in Bioengineering + Masters in Biomedical Engineering). 
+
+These scripts saved me a ton of copy-paste. Hope they can save some for you too!
