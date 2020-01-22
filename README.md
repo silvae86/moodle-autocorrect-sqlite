@@ -55,13 +55,15 @@ While they both share the same database schema, one is provided to the students 
 
 	<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/download_answers.jpg" alt="Ordering and downloading student answers" width="800"/>
 
-2. Change the name of the downloaded file, for example to `student_answers.xlsx` and place it in the `correction` folder.
+2. Change the name of the downloaded file to `student_answers.xlsx` and place it in the `correction` folder.
 
-3. Place the scripts that create the database schema and insert the necessary records in the `correction` folder: for example `script-students.sql` and `script-correction.sql`
+3. Place the scripts that create the database schema and insert the necessary records in the `correction` folder: `script-students.sql` for the script given to the students and `script-correction.sql` to your correction script.
 
 4. Now we need to place your proposed solutions for the SQL questions in the `correction/proposed_answers` folder.
 
-	4.1. For every question that you want to automatically correct, place a `.sql` file with the same name as the header of the column in the Excel file downloaded from Moodle. For example, if the `Response 15` column in the Excel file contains student answers, you need to create a `correction/proposed_answers/Response 15.sql` file with your proposed solution (in SQL) for that question.
+	4.1. For every question that you want to automatically correct, place a `.sql` file with the same name as the header of the column in the Excel file downloaded from Moodle. 
+	
+	- For example, if the `Response 15` column in the Excel file contains SQL answers, you need to create a `correction/proposed_answers/Response 15.sql` file with your proposed solution (in SQL) for that question.
 
 	4.2. The script will detect these `.sql` files and try to correct only those answers where there is a proposed answer.
 
