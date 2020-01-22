@@ -1,0 +1,5 @@
+lolinho
+lolinho
+lolinho2
+0
+Invalid question name: lolinho. Is there a column named ${question_column} in the Excel file with the students' answers?
