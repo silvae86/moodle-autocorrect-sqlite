@@ -75,7 +75,9 @@ The hard part is done. Let's run the script.
 	`./run.sh`
 	
 4. See the results in the `Results/` folder. 
-	- There should be one .txt file for each of the questions, with this layout:
+	- There should be one .txt file for each of the questions, more or less like this: 
+
+	<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/results.png" alt="Example of the results" width="250"/>
 
 ## Background
 
