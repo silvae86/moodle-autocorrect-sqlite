@@ -88,7 +88,7 @@ The hard part is done. Let's run the script.
 
 Access the exam in Moodle and go to the little gear at the top right and select "Manual Grading". After choosing the question you want to grade, change the settings to 1. Sort by the same criteria you used when you downloaded your Excel spreadsheet with the answers and 2. Show many answers per page:
 
-<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/manual-grading-settings.png" alt="Manual Grading Settings Example" width="100%"/>
+<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/manual-grading-settings.png" alt="Manual Grading Settings Example" />
 	
 Then, open the text file by the side of the manual grading window. Scroll in parallel and start grading!
 
