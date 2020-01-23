@@ -84,6 +84,14 @@ The hard part is done. Let's run the script.
 
 	<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/results.png" alt="Example of the results" width="250"/>
 
+### Grading
+
+Access the exam in Moodle and go to the little gear at the top right and select "Manual Grading". After choosing the question you want to grade, change the settings to 1. Sort by the same criteria you used when you downloaded your Excel spreadsheet with the answers and 2. Show many answers per page:
+
+	<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/manual-grading-settings.png" alt="Manual Grading Settings Example" width="100%"/>
+	
+Then, open the text file by the side of the manual grading window. Scroll in parallel and start grading!
+
 ## Background
 
 I have taught some courses involving databases and SQL (Databases in the Integrated Masters in Informatics Engineering) and Information Systems and Databases (Integrated Masters in Electrical Engineering) and Information Systems Engineering (Integrated Masters in Bioengineering + Masters in Biomedical Engineering).
