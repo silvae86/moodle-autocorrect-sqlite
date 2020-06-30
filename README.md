@@ -17,27 +17,45 @@ While they both share the same database schema, one is provided to the students 
 
 ## Pre-requisites
 
-	- Ubuntu Linux or
-	- macOS with [Homebrew](https://brew.sh) installed
+- Install [Docker](https://docs.docker.com/get-docker/).
 
 ## Instructions
 
-### Installation
-
 1. Open Terminal
-2. Clone the repository:
+2. Clone the repository or download the ZIP:
+	- `git clone https://github.com/silvae86/moodle-autocorrect-sqlite`
+	- Download the ZIP file (here in this GitHub page, at the top -> Green Button that says "Clone" -> Download ZIP) and extract it.
 
-		`git clone https://github.com/silvae86/moodle-autocorrect-sqlite`
-
-3. Go to the directory where the cloned files are:
-
+3. Open a command line and go to the directory where the files are:
 		`cd moodle-autocorrect-sqlite`
 
-4. Run the setup in Terminal (should detect your operating system, macOS or Ubuntu, and act appropriately)
+4. Prepare the environment as [shown below](https://github.com/silvae86/moodle-autocorrect-sqlite#preparation-of-the-environment).
 
-	- `chmod +x setup.sh && ./setup.sh`
+5. Run the commands that produce the corrections
 
-### Preparation of the environment
+ 1. **In Linux / Mac**
+```bash
+docker pull joaorosilva/moodle-autocorrect-sqlite:latest
+docker run -v "$(pwd)/correction":/data/correction -w /data joaorosilva/moodle-autocorrect-sqlite:latest
+```
+ 2. **In Windows CMD** (Type Win Key+R -> `cmd.exe` -> Enter)
+```shell
+docker pull joaorosilva/moodle-autocorrect-sqlite:latest
+docker run -v "%cd%\correction":/data -w /data joaorosilva/moodle-autocorrect-sqlite:latest
+```
+ 3. **In Windows PowerShell**
+```PowerShell
+docker pull joaorosilva/moodle-autocorrect-sqlite:latest
+docker run -v "${PWD}":/data -w /data joaorosilva/moodle-autocorrect-sqlite:latest
+```
+
+
+6. See the results in the `Results/` folder.
+	- There should be one .txt file for each of the questions, more or less like this:
+
+	<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/results.png" alt="Example of the results" width="250"/>
+
+## Preparation of the environment
 
 1. Download the answers of your students from moodle
 
@@ -62,29 +80,12 @@ While they both share the same database schema, one is provided to the students 
 4. Now we need to place your proposed solutions for the SQL questions in the `correction/proposed_answers` folder.
 
 	4.1. For every question that you want to automatically correct, place a `.sql` file with the same name as the header of the column in the Excel file downloaded from Moodle. 
-	
 	- For example, if the `Response 15` column in the Excel file contains SQL answers, you need to create a `correction/proposed_answers/Response 15.sql` file with your proposed solution (in SQL) for that question.
 
 	4.2. The script will detect these `.sql` files and try to correct only those answers where there is a proposed answer.
 
 
-### Running the script
-
-The hard part is done. Let's run the script.
-
-1. Open Terminal
-
-2. `cd` to the folder where your files are (same as where you initially cloned this too)
-
-3. Run script
-	`./run.sh`
-
-4. See the results in the `Results/` folder.
-	- There should be one .txt file for each of the questions, more or less like this:
-
-	<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/results.png" alt="Example of the results" width="250"/>
-
-### Grading
+## Grading
 
 Access the exam in Moodle and go to the little gear at the top right and select "Manual Grading". After choosing the question you want to grade, change the settings like this:
 
@@ -95,7 +96,7 @@ Access the exam in Moodle and go to the little gear at the top right and select 
 	
 Then, open the text file by the side of the manual grading window. Scroll in parallel and start grading!
 
-## Background
+### Background
 
 I have taught some courses involving databases and SQL (Databases in the Integrated Masters in Informatics Engineering) and Information Systems and Databases (Integrated Masters in Electrical Engineering) and Information Systems Engineering (Integrated Masters in Bioengineering + Masters in Biomedical Engineering).
 

@@ -42,3 +42,5 @@ source env/bin/activate
 
 # (optional) install any requirements of your current app in this venv
 $PIP install -r requirements.txt $FLAGS
+
+sudo cp -R /moodle-autocorrect-sqlite /data
