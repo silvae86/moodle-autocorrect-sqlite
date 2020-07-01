@@ -65,9 +65,9 @@ docker run -v "${PWD}/correction":/data/correction -v /data "${PWD}/Results":/da
 
 	<img src="https://github.com/silvae86/moodle-autocorrect-sqlite/raw/master/docs/img/downloading_answers.png" alt="Access all student answers" width="200"/>
 
-	1.2. Sort the answers by the first name of the students (or any other criteria, as the SQL evaluator will produce a list of answers ordered by that same criteria).
+	1.2. Sort the answers by the first name of the students (or any other criteria, as the SQL evaluator will produce a list of answers ordered by that same criteria). This is important, because you want an ordering that is consistent in Moodle. I always use the first name.
 
-	1.3. Select Microsoft Excel as the download format for the answers
+	1.3. Select Microsoft Excel as the download format for the answers.
 
 	1.4. Click 'Download'. An Excel file will be produced by moodle and start downloading.
 
