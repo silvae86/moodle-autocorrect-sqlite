@@ -101,3 +101,13 @@ Then, open the text file by the side of the manual grading window. Scroll in par
 I have taught some courses involving databases and SQL (Databases in the Integrated Masters in Informatics Engineering) and Information Systems and Databases (Integrated Masters in Electrical Engineering) and Information Systems Engineering (Integrated Masters in Bioengineering + Masters in Biomedical Engineering).
 
 These scripts saved me a ton of copy-paste. Hope they can save some for you too!
+
+### For the curious
+
+This command mounts the current folder in a Docker container, more specifically at its `/data` location; this way, it has bidirectional access to all files placed in the current directory (sql scripts...). Then it runs the script, placing outputs in the `correction/` folder.
+
+To build and test the image locally, this is the command: 
+
+```shell
+docker build -t moodle-autocorrect-sqlite:latest . && docker run -v "$(pwd)/correction":/data/correction -w /data moodle-autocorrect-sqlite:latest
+```
