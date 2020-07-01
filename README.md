@@ -1,5 +1,8 @@
 # Moodle SQL Evaluator for SQLite
 
+[![](https://images.microbadger.com/badges/image/joaorosilva/moodle-autocorrect-sqlite.svg)](https://microbadger.com/images/joaorosilva/moodle-autocorrect-sqlite "Get your own image badge on microbadger.com")
+
+[![](https://images.microbadger.com/badges/version/joaorosilva/moodle-autocorrect-sqlite.svg)](https://microbadger.com/images/joaorosilva/moodle-autocorrect-sqlite "Get your own version badge on microbadger.com")
 
 This project is intended to help teachers grade SQL exercises for exams run on Moodle, when a fully automated approach is not the most appropriate and the professors want to grade manually but with some assistance for automatically running the queries written by students.
 
