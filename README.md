@@ -109,5 +109,5 @@ This command mounts the current folder in a Docker container, more specifically 
 To build and test the image locally, this is the command: 
 
 ```shell
-docker build -t moodle-autocorrect-sqlite:latest . && -v "$(pwd)/correction":/data/correction -v "$(pwd)/Results":/data/Results -w /data moodle-autocorrect-sqlite:latest
+docker build -t moodle-autocorrect-sqlite:latest . && docker run -v "$(pwd)/correction":/data/correction -v "$(pwd)/Results":/data/Results -w /data moodle-autocorrect-sqlite:latest
 ```
