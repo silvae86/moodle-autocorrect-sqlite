@@ -36,17 +36,17 @@ While they both share the same database schema, one is provided to the students 
  1. **In Linux / Mac**
 ```bash
 docker pull joaorosilva/moodle-autocorrect-sqlite:latest
-docker run -v "$(pwd)/correction":/data/correction -w /data joaorosilva/moodle-autocorrect-sqlite:latest
+docker run -v "$(pwd)/correction":/data/correction -v "$(pwd)/Results":/data/Results -w /data joaorosilva/moodle-autocorrect-sqlite:latest
 ```
  2. **In Windows CMD** (Type Win Key+R -> `cmd.exe` -> Enter)
 ```shell
 docker pull joaorosilva/moodle-autocorrect-sqlite:latest
-docker run -v "%cd%\correction":/data -w /data joaorosilva/moodle-autocorrect-sqlite:latest
+docker run -v "%cd%\correction":/data/correction -v "%cd%\Results":/data/Results -w /data joaorosilva/moodle-autocorrect-sqlite:latest
 ```
  3. **In Windows PowerShell**
 ```PowerShell
 docker pull joaorosilva/moodle-autocorrect-sqlite:latest
-docker run -v "${PWD}":/data -w /data joaorosilva/moodle-autocorrect-sqlite:latest
+docker run -v "${PWD}/correction":/data/correction -v /data "${PWD}/Results":/data/Results -w joaorosilva/moodle-autocorrect-sqlite:latest
 ```
 
 
@@ -109,5 +109,5 @@ This command mounts the current folder in a Docker container, more specifically 
 To build and test the image locally, this is the command: 
 
 ```shell
-docker build -t moodle-autocorrect-sqlite:latest . && docker run -v "$(pwd)/correction":/data/correction -w /data moodle-autocorrect-sqlite:latest
+docker build -t moodle-autocorrect-sqlite:latest . && -v "$(pwd)/correction":/data/correction -v "$(pwd)/Results":/data/Results -w /data moodle-autocorrect-sqlite:latest
 ```
