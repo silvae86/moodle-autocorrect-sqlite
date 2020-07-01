@@ -26,12 +26,12 @@ While they both share the same database schema, one is provided to the students 
 	- `git clone https://github.com/silvae86/moodle-autocorrect-sqlite`
 	- Download the ZIP file (here in this GitHub page, at the top -> Green Button that says "Clone" -> Download ZIP) and extract it.
 
-3. Open a command line and go to the directory where the files are:
+3. Open a command line and go to the directory where the unzipped files are, for example:
 		`cd moodle-autocorrect-sqlite`
 
 4. Prepare the environment as [shown below](https://github.com/silvae86/moodle-autocorrect-sqlite#preparation-of-the-environment).
 
-5. Run the commands that produce the corrections
+5. Run the commands that produce the corrections:
 
  1. **In Linux / Mac**
 ```bash
